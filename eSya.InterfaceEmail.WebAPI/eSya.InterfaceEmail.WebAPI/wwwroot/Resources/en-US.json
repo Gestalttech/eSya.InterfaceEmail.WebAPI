@@ -1,0 +1,11 @@
+{
+  "W0111": "No Schema found to Save",
+  "W0112": "Email Connect not Exist",
+  "W0113": "No Schema found to Activate/D-Activate",
+
+  "S0001": "Saved Sucessfully",
+  "S0002": "Updated Sucessfully",
+  "S0003": "Activated Successfully",
+  "S0004": "De Activated Successfully",
+  "S0005": "Deleted Sucessfully"
+}

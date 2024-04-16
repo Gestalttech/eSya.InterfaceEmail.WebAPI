@@ -1,0 +1,15 @@
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\bin\Debug\net6.0\eSya.InterfaceEmail.IF.deps.json
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\bin\Debug\net6.0\eSya.InterfaceEmail.IF.dll
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\bin\Debug\net6.0\eSya.InterfaceEmail.IF.pdb
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\bin\Debug\net6.0\eSya.InterfaceEmail.DO.dll
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\bin\Debug\net6.0\eSya.InterfaceEmail.DO.pdb
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\obj\Debug\net6.0\eSya.InterfaceEmail.IF.csproj.AssemblyReference.cache
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\obj\Debug\net6.0\eSya.InterfaceEmail.IF.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\obj\Debug\net6.0\eSya.InterfaceEmail.IF.AssemblyInfoInputs.cache
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\obj\Debug\net6.0\eSya.InterfaceEmail.IF.AssemblyInfo.cs
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\obj\Debug\net6.0\eSya.InterfaceEmail.IF.csproj.CoreCompileInputs.cache
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\obj\Debug\net6.0\eSya.InterfaceEmail.IF.csproj.CopyComplete
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\obj\Debug\net6.0\eSya.InterfaceEmail.IF.dll
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\obj\Debug\net6.0\refint\eSya.InterfaceEmail.IF.dll
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\obj\Debug\net6.0\eSya.InterfaceEmail.IF.pdb
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\obj\Debug\net6.0\ref\eSya.InterfaceEmail.IF.dll

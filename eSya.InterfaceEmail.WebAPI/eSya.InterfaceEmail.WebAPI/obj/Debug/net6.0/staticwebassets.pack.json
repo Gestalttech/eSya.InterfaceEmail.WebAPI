@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Projects\\eSyaProjects2022\\eSya.InterfaceEmail.WebAPI\\eSya.InterfaceEmail.WebAPI\\eSya.InterfaceEmail.WebAPI\\wwwroot\\Resources\\ar-EG.json",
+      "PackagePath": "staticwebassets\\Resources\\ar-EG.json"
+    },
+    {
+      "Id": "D:\\Projects\\eSyaProjects2022\\eSya.InterfaceEmail.WebAPI\\eSya.InterfaceEmail.WebAPI\\eSya.InterfaceEmail.WebAPI\\wwwroot\\Resources\\en-US.json",
+      "PackagePath": "staticwebassets\\Resources\\en-US.json"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.eSya.InterfaceEmail.WebAPI.props",
+      "PackagePath": "build\\eSya.InterfaceEmail.WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.eSya.InterfaceEmail.WebAPI.props",
+      "PackagePath": "buildMultiTargeting\\eSya.InterfaceEmail.WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.eSya.InterfaceEmail.WebAPI.props",
+      "PackagePath": "buildTransitive\\eSya.InterfaceEmail.WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.eSya.InterfaceEmail.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

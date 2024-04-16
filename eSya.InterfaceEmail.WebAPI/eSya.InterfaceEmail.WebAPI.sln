@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSya.InterfaceEmail.WebAPI", "eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.WebAPI.csproj", "{C29A59C5-9750-40AC-9770-A002FC4A9891}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSya.InterfaceEmail.DL", "..\eSya.InterfaceEmail.DL\eSya.InterfaceEmail.DL\eSya.InterfaceEmail.DL.csproj", "{DE180E14-AF18-44B5-A0B2-DC7760607CE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSya.InterfaceEmail.IF", "..\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF.csproj", "{8EC82BE0-4E48-438D-90AE-1781FC8FFF3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSya.InterfaceEmail.DO", "..\eSya.InterfaceEmail.DO\eSya.InterfaceEmail.DO\eSya.InterfaceEmail.DO.csproj", "{8090F287-0186-4E3C-9586-DB5932F1F076}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C29A59C5-9750-40AC-9770-A002FC4A9891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C29A59C5-9750-40AC-9770-A002FC4A9891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C29A59C5-9750-40AC-9770-A002FC4A9891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C29A59C5-9750-40AC-9770-A002FC4A9891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE180E14-AF18-44B5-A0B2-DC7760607CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE180E14-AF18-44B5-A0B2-DC7760607CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE180E14-AF18-44B5-A0B2-DC7760607CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE180E14-AF18-44B5-A0B2-DC7760607CE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EC82BE0-4E48-438D-90AE-1781FC8FFF3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EC82BE0-4E48-438D-90AE-1781FC8FFF3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EC82BE0-4E48-438D-90AE-1781FC8FFF3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EC82BE0-4E48-438D-90AE-1781FC8FFF3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8090F287-0186-4E3C-9586-DB5932F1F076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8090F287-0186-4E3C-9586-DB5932F1F076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8090F287-0186-4E3C-9586-DB5932F1F076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8090F287-0186-4E3C-9586-DB5932F1F076}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {261E22C2-95F5-42B5-BFEB-9A0A682559DF}
+	EndGlobalSection
+EndGlobal
