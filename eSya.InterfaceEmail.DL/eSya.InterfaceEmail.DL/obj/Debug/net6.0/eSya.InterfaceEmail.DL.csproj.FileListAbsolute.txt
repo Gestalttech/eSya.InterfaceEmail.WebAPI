@@ -17,3 +17,4 @@ D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.DL\e
 D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.DL\eSya.InterfaceEmail.DL\obj\Debug\net6.0\ref\eSya.InterfaceEmail.DL.dll
 D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.DL\eSya.InterfaceEmail.DL\bin\Debug\net6.0\eSya.InterfaceEmail.DL.runtimeconfig.json
 D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.DL\eSya.InterfaceEmail.DL\obj\Debug\net6.0\eSya.InterfaceEmail.DL.genruntimeconfig.cache
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.DL\eSya.InterfaceEmail.DL\obj\Debug\net6.0\eSya.InterfaceEmail.DL.sourcelink.json

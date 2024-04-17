@@ -10,6 +10,9 @@ namespace eSya.InterfaceEmail.IF
     public interface IEmailConnectRepository
     {
         #region Email Connect
+        Task<List<DO_BusinessLocation>> GetBusinessLocationByBusinessID(int BusinessId);
+        Task<DO_CountryCodes> GetLocationISDCodeByBusinessKey(int BusinessKey);
+        Task<List<DO_BusinessEntity>> GetActiveEntites();
         Task<List<DO_EmailConnect>> GetEmailConnectbyBusinessID(int BusinessId);
         Task<DO_ReturnParameter> InsertOrUpdateEmailConnect(DO_EmailConnect obj);
         Task<DO_ReturnParameter> ActiveOrDeActiveEmailConnect(DO_EmailConnect obj);

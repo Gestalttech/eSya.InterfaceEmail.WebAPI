@@ -13,3 +13,4 @@ D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\e
 D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\obj\Debug\net6.0\refint\eSya.InterfaceEmail.IF.dll
 D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\obj\Debug\net6.0\eSya.InterfaceEmail.IF.pdb
 D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\obj\Debug\net6.0\ref\eSya.InterfaceEmail.IF.dll
+D:\Projects\eSyaProjects2022\eSya.InterfaceEmail.WebAPI\eSya.InterfaceEmail.IF\eSya.InterfaceEmail.IF\obj\Debug\net6.0\eSya.InterfaceEmail.IF.sourcelink.json

@@ -20,6 +20,71 @@ namespace eSya.InterfaceEmail.DL.Repository
         }
 
         #region Email Connect
+        public async Task<List<DO_BusinessLocation>> GetBusinessLocationByBusinessID(int BusinessId)
+        {
+            try
+            {
+                using (var db = new eSyaEnterprise())
+                {
+                    var bk = db.GtEcbslns.Where(x => x.BusinessId == BusinessId && x.ActiveStatus)
+                        .Where(w => w.ActiveStatus)
+                        .Select(r => new DO_BusinessLocation
+                        {
+                            BusinessKey = r.BusinessKey,
+                            LocationDescription = r.BusinessName + "-" + r.LocationDescription
+                        }).ToListAsync();
+
+                    return await bk;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public async Task<DO_CountryCodes> GetLocationISDCodeByBusinessKey(int BusinessKey)
+        {
+            try
+            {
+                using (var db = new eSyaEnterprise())
+                {
+                    var bk = db.GtEcbslns.Where(x => x.BusinessKey == BusinessKey && x.ActiveStatus)
+                        .Where(w => w.ActiveStatus)
+                        .Select(r => new DO_CountryCodes
+                        {
+                            Isdcode = r.Isdcode,
+                            CountryName = r.BusinessName
+                        }).FirstOrDefaultAsync();
+
+                    return await bk;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public async Task<List<DO_BusinessEntity>> GetActiveEntites()
+        {
+            try
+            {
+                using (var db = new eSyaEnterprise())
+                {
+                    var locs = db.GtEcbsens.Where(x => x.ActiveStatus)
+                        .Select(x => new DO_BusinessEntity
+                        {
+                            BusinessId = x.BusinessId,
+                            BusinessDesc = x.BusinessDesc
+                        }).ToListAsync();
+
+                    return await locs;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public async Task<List<DO_EmailConnect>> GetEmailConnectbyBusinessID(int BusinessId)
         {
             try

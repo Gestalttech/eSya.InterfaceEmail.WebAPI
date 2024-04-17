@@ -18,6 +18,36 @@ namespace eSya.InterfaceEmail.WebAPI.Controllers
 
         #region Email Connect
         /// <summary>
+        /// Getting Active Business.
+        /// UI Reffered - Email Connect 
+        /// </summary>
+        [HttpGet]
+        public async Task<IActionResult> GetActiveEntites()
+        {
+            var entity = await _emailconnectRepository.GetActiveEntites();
+            return Ok(entity);
+        }
+        /// <summary>
+        /// Getting Business Location by Business ID.
+        /// UI Reffered - Email Connect 
+        /// </summary>
+        [HttpGet]
+        public async Task<IActionResult> GetBusinessLocationByBusinessID(int BusinessId)
+        {
+            var emails = await _emailconnectRepository.GetBusinessLocationByBusinessID(BusinessId);
+            return Ok(emails);
+        }
+        /// <summary>
+        /// Getting ISD Code  by Business Key.
+        /// UI Reffered - Email Connect Grid
+        /// </summary>
+        [HttpGet]
+        public async Task<IActionResult> GetLocationISDCodeByBusinessKey(int BusinessKey)
+        {
+            var emails = await _emailconnectRepository.GetLocationISDCodeByBusinessKey(BusinessKey);
+            return Ok(emails);
+        }
+        /// <summary>
         /// Getting Email Connect by Business ID.
         /// UI Reffered - Email Connect Grid
         /// </summary>
