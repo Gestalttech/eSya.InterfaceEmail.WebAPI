@@ -18,6 +18,7 @@ namespace eSya.InterfaceEmail.DL.Entities
         {
         }
 
+        public virtual DbSet<GtEcapcd> GtEcapcds { get; set; } = null!;
         public virtual DbSet<GtEcbsen> GtEcbsens { get; set; } = null!;
         public virtual DbSet<GtEcbsln> GtEcbslns { get; set; } = null!;
         public virtual DbSet<GtEce254> GtEce254s { get; set; } = null!;
@@ -34,6 +35,33 @@ namespace eSya.InterfaceEmail.DL.Entities
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<GtEcapcd>(entity =>
+            {
+                entity.HasKey(e => e.ApplicationCode)
+                    .HasName("PK_GT_ECAPCD_1");
+
+                entity.ToTable("GT_ECAPCD");
+
+                entity.Property(e => e.ApplicationCode).ValueGeneratedNever();
+
+                entity.Property(e => e.CodeDesc).HasMaxLength(50);
+
+                entity.Property(e => e.CreatedOn).HasColumnType("datetime");
+
+                entity.Property(e => e.CreatedTerminal).HasMaxLength(50);
+
+                entity.Property(e => e.FormId)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("FormID");
+
+                entity.Property(e => e.ModifiedOn).HasColumnType("datetime");
+
+                entity.Property(e => e.ModifiedTerminal).HasMaxLength(50);
+
+                entity.Property(e => e.ShortCode).HasMaxLength(15);
+            });
+
             modelBuilder.Entity<GtEcbsen>(entity =>
             {
                 entity.HasKey(e => e.BusinessId);
@@ -114,7 +142,7 @@ namespace eSya.InterfaceEmail.DL.Entities
 
             modelBuilder.Entity<GtEce254>(entity =>
             {
-                entity.HasKey(e => new { e.BusinessKey, e.OutgoingMailServer });
+                entity.HasKey(e => new { e.BusinessKey, e.EmailType, e.OutgoingMailServer });
 
                 entity.ToTable("GT_ECE254");
 
@@ -134,11 +162,21 @@ namespace eSya.InterfaceEmail.DL.Entities
                 entity.Property(e => e.ModifiedOn).HasColumnType("datetime");
 
                 entity.Property(e => e.ModifiedTerminal).HasMaxLength(50);
+
+                entity.Property(e => e.PassKey).HasMaxLength(2000);
+
+                entity.Property(e => e.Password).HasMaxLength(2000);
+
+                entity.Property(e => e.SenderEmailId)
+                    .HasMaxLength(2000)
+                    .HasColumnName("SenderEmailID");
+
+                entity.Property(e => e.UserName).HasMaxLength(2000);
             });
 
             modelBuilder.Entity<GtEcem91>(entity =>
             {
-                entity.HasKey(e => new { e.BusinessKey, e.OutgoingMailServer });
+                entity.HasKey(e => new { e.BusinessKey, e.EmailType, e.OutgoingMailServer });
 
                 entity.ToTable("GT_ECEM91");
 
@@ -158,6 +196,16 @@ namespace eSya.InterfaceEmail.DL.Entities
                 entity.Property(e => e.ModifiedOn).HasColumnType("datetime");
 
                 entity.Property(e => e.ModifiedTerminal).HasMaxLength(50);
+
+                entity.Property(e => e.PassKey).HasMaxLength(2000);
+
+                entity.Property(e => e.Password).HasMaxLength(2000);
+
+                entity.Property(e => e.SenderEmailId)
+                    .HasMaxLength(2000)
+                    .HasColumnName("SenderEmailID");
+
+                entity.Property(e => e.UserName).HasMaxLength(2000);
             });
 
             OnModelCreatingPartial(modelBuilder);

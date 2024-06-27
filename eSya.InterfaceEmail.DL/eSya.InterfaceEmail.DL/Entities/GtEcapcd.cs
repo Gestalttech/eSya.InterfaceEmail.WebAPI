@@ -3,16 +3,14 @@ using System.Collections.Generic;
 
 namespace eSya.InterfaceEmail.DL.Entities
 {
-    public partial class GtEce254
+    public partial class GtEcapcd
     {
-        public int BusinessKey { get; set; }
-        public int EmailType { get; set; }
-        public string OutgoingMailServer { get; set; } = null!;
-        public int Port { get; set; }
-        public string SenderEmailId { get; set; } = null!;
-        public string UserName { get; set; } = null!;
-        public string Password { get; set; } = null!;
-        public string? PassKey { get; set; }
+        public int ApplicationCode { get; set; }
+        public int CodeType { get; set; }
+        public string CodeDesc { get; set; } = null!;
+        public string ShortCode { get; set; } = null!;
+        public bool DefaultStatus { get; set; }
+        public bool UsageStatus { get; set; }
         public bool ActiveStatus { get; set; }
         public string FormId { get; set; } = null!;
         public int CreatedBy { get; set; }

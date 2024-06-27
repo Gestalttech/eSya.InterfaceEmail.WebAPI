@@ -100,31 +100,53 @@ namespace eSya.InterfaceEmail.DL.Repository
                     switch (ISDCode)
                     {
                         case 91:
-                            var locs = db.GtEcbslns.Where(x => x.BusinessId == BusinessId)
+                         var locs = db.GtEcbslns.Where(x => x.BusinessId == BusinessId)
                         .Join(db.GtEcem91s,
                          x => x.BusinessKey,
-                         y => y.BusinessKey,
-                        (x, y) => new DO_EmailConnect
+                         y => y.BusinessKey ,
+                         (x, y) => new { x, y })
+                        .Join(db.GtEcapcds,
+                        xy => xy.y.EmailType,
+                        z=>   z.ApplicationCode,
+                        (xy,z)=>new {xy,z})
+                        .Select(r=> new DO_EmailConnect
                         {
-                            BusinessKey = y.BusinessKey,
-                            OutgoingMailServer = y.OutgoingMailServer,
-                            Port = y.Port,
-                            ActiveStatus = y.ActiveStatus,
+                            BusinessKey = r.xy.y.BusinessKey,
+                            EmailType= r.xy.y.EmailType,
+                            OutgoingMailServer = r.xy.y.OutgoingMailServer,
+                            Port = r.xy.y.Port,
+                            SenderEmailId= r.xy.y.SenderEmailId,
+                            UserName = eSyaCryptGeneration.Decrypt(r.xy.y.UserName),
+                            Password = eSyaCryptGeneration.Decrypt(r.xy.y.Password),
+                            PassKey= r.xy.y.PassKey,
+                            ActiveStatus = r.xy.y.ActiveStatus,
+                            EmailTypeDesc=r.z.CodeDesc,
                             ISDCode = 91
                         }).ToListAsync();
                             return await locs;
 
                         case 254:
-                            var result_254 = db.GtEcbslns.Where(x => x.BusinessId == BusinessId)
+                         var result_254 = db.GtEcbslns.Where(x => x.BusinessId == BusinessId)
                         .Join(db.GtEce254s,
                          x => x.BusinessKey,
                          y => y.BusinessKey,
-                        (x, y) => new DO_EmailConnect
+                         (x, y) => new { x, y })
+                        .Join(db.GtEcapcds,
+                        xy => xy.y.EmailType,
+                        z => z.ApplicationCode,
+                        (xy, z) => new { xy, z })
+                        .Select(r => new DO_EmailConnect
                         {
-                            BusinessKey = y.BusinessKey,
-                            OutgoingMailServer = y.OutgoingMailServer,
-                            Port = y.Port,
-                            ActiveStatus = y.ActiveStatus,
+                            BusinessKey = r.xy.y.BusinessKey,
+                            EmailType = r.xy.y.EmailType,
+                            OutgoingMailServer = r.xy.y.OutgoingMailServer,
+                            Port = r.xy.y.Port,
+                            SenderEmailId = r.xy.y.SenderEmailId,
+                            UserName = eSyaCryptGeneration.Decrypt(r.xy.y.UserName),
+                            Password = eSyaCryptGeneration.Decrypt(r.xy.y.Password),
+                            PassKey = r.xy.y.PassKey,
+                            ActiveStatus = r.xy.y.ActiveStatus,
+                            EmailTypeDesc = r.z.CodeDesc,
                             ISDCode = 254
                         }).ToListAsync();
                             return await result_254;
@@ -134,16 +156,27 @@ namespace eSya.InterfaceEmail.DL.Repository
 
                         default:
                             var defaultlocs = db.GtEcbslns.Where(x => x.BusinessId == BusinessId)
-                    .Join(db.GtEcem91s,
-                     x => x.BusinessKey,
-                     y => y.BusinessKey,
-                     (x, y) => new DO_EmailConnect
-                     {
-                         BusinessKey = y.BusinessKey,
-                         OutgoingMailServer = y.OutgoingMailServer,
-                         Port = y.Port,
-                         ActiveStatus = y.ActiveStatus,
-                         ISDCode = 91
+                        .Join(db.GtEcem91s,
+                         x => x.BusinessKey,
+                         y => y.BusinessKey,
+                         (x, y) => new { x, y })
+                        .Join(db.GtEcapcds,
+                        xy => xy.y.EmailType,
+                        z => z.ApplicationCode,
+                        (xy, z) => new { xy, z })
+                        .Select(r => new DO_EmailConnect
+                        {
+                            BusinessKey = r.xy.y.BusinessKey,
+                            EmailType = r.xy.y.EmailType,
+                            OutgoingMailServer = r.xy.y.OutgoingMailServer,
+                            Port = r.xy.y.Port,
+                            SenderEmailId = r.xy.y.SenderEmailId,
+                            UserName = eSyaCryptGeneration.Decrypt(r.xy.y.UserName),
+                            Password = eSyaCryptGeneration.Decrypt(r.xy.y.Password),
+                            PassKey = r.xy.y.PassKey,
+                            ActiveStatus = r.xy.y.ActiveStatus,
+                            EmailTypeDesc = r.z.CodeDesc,
+                            ISDCode = 91
                      }).ToListAsync();
                             return await defaultlocs;
                     }
@@ -169,10 +202,14 @@ namespace eSya.InterfaceEmail.DL.Repository
                         {
                             case 91:
 
-                                GtEcem91 _emailcon = db.GtEcem91s.Where(be => be.BusinessKey == obj.BusinessKey && be.OutgoingMailServer.ToUpper().Replace(" ", "") == obj.OutgoingMailServer.ToUpper().Replace(" ", "")).FirstOrDefault();
+                                GtEcem91 _emailcon = db.GtEcem91s.Where(be => be.BusinessKey == obj.BusinessKey && be.EmailType == obj.EmailType && be.OutgoingMailServer.ToUpper().Replace(" ", "") == obj.OutgoingMailServer.ToUpper().Replace(" ", "")).FirstOrDefault();
                                 if (_emailcon != null)
                                 {
                                     _emailcon.Port = obj.Port;
+                                    _emailcon.SenderEmailId = obj.SenderEmailId;
+                                    _emailcon.UserName = eSyaCryptGeneration.Encrypt(obj.UserName);
+                                    _emailcon.Password = eSyaCryptGeneration.Encrypt(obj.Password);
+                                    _emailcon.PassKey =obj.PassKey;
                                     _emailcon.ActiveStatus = obj.ActiveStatus;
                                     _emailcon.ModifiedBy = obj.UserID;
                                     _emailcon.ModifiedOn = System.DateTime.Now;
@@ -186,8 +223,13 @@ namespace eSya.InterfaceEmail.DL.Repository
                                     var email = new GtEcem91
                                     {
                                         BusinessKey = obj.BusinessKey,
+                                        EmailType=obj.EmailType,
                                         OutgoingMailServer = obj.OutgoingMailServer,
                                         Port = obj.Port,
+                                        SenderEmailId=obj.SenderEmailId,
+                                        UserName = eSyaCryptGeneration.Encrypt(obj.UserName),
+                                        Password = eSyaCryptGeneration.Encrypt(obj.Password),
+                                        PassKey= obj.PassKey,
                                         ActiveStatus = obj.ActiveStatus,
                                         FormId = obj.FormID,
                                         CreatedBy = obj.UserID,
@@ -208,6 +250,10 @@ namespace eSya.InterfaceEmail.DL.Repository
                                 if (emailcon != null)
                                 {
                                     emailcon.Port = obj.Port;
+                                    emailcon.SenderEmailId = obj.SenderEmailId;
+                                    emailcon.UserName = eSyaCryptGeneration.Encrypt(obj.UserName);
+                                    emailcon.Password = eSyaCryptGeneration.Encrypt(obj.Password);
+                                    emailcon.PassKey =obj.PassKey;
                                     emailcon.ActiveStatus = obj.ActiveStatus;
                                     emailcon.ModifiedBy = obj.UserID;
                                     emailcon.ModifiedOn = System.DateTime.Now;
@@ -221,8 +267,13 @@ namespace eSya.InterfaceEmail.DL.Repository
                                     var email = new GtEce254
                                     {
                                         BusinessKey = obj.BusinessKey,
+                                        EmailType = obj.EmailType,
                                         OutgoingMailServer = obj.OutgoingMailServer,
                                         Port = obj.Port,
+                                        SenderEmailId = obj.SenderEmailId,
+                                        UserName = eSyaCryptGeneration.Encrypt(obj.UserName),
+                                        Password = eSyaCryptGeneration.Encrypt(obj.Password),
+                                        PassKey = obj.PassKey,
                                         ActiveStatus = obj.ActiveStatus,
                                         FormId = obj.FormID,
                                         CreatedBy = obj.UserID,

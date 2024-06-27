@@ -54,6 +54,7 @@ builder.Services.AddCors(c =>
 {
     c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
 });
+builder.Services.AddScoped<ICommonDataRepository, CommonDataRepository>();
 
 builder.Services.AddScoped<IEmailConnectRepository, EmailConnectRepository>();
 
